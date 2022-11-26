@@ -7,7 +7,7 @@ En la carpeta "lib" Hay que crear el archivo "__init__.py" y "authorizer.py", el
 del archivo authorizer se encuentra en el archivo coding.txt, donde también se encontrará
 la información del archivo .env que irá a nivel de la carpeta src y env.
 
-Para instalar la base de datos hay que abrir pgAdmin4 y en la sección que dice bases de datos
+Para utilizar la base de datos hay que instalar postgres, abrir pgAdmin4 y en la sección que dice bases de datos
 damos clic derecho en postgres y clicamos en la opción restaurar y buscamos el archivo
 prueba_tecnica_backend.sql 
 
