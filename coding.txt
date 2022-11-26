@@ -1,0 +1,28 @@
+authorizer.py
+
+import jwt
+def generate_token(email, secret):
+    payload = {
+        'email': email,
+    }
+    token = jwt.encode(payload, secret, algorithm='HS256')
+    return token
+
+def decode_token(token, secret):
+    try:
+        payload = jwt.decode(token, secret, algorithms=['HS256'])
+        return payload['email']
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
+
+****************************************************************************************************************
+.env 
+
+SECRET_KEY = pruebatécnica01
+HOST = localhost
+PORT = 5432
+DATABASE = prueba_tecnica_backend
+USER = ametjimgra
+PASSWORD = Amet5903!
